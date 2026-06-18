@@ -1,0 +1,61 @@
+.app-grid-page {
+  min-height: 100vh;
+  padding: 3rem;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+.app-grid-header {
+  margin-bottom: 2rem;
+
+  h1 {
+    margin: 0 0 0.5rem;
+    font-size: 2rem;
+  }
+
+  p {
+    margin: 0;
+    color: #6b7280;
+  }
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.app-card {
+  display: block;
+  padding: 1.5rem;
+  border: 0;
+  border-radius: 1rem;
+  background: #ffffff;
+  color: inherit;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  font: inherit;
+  box-shadow: 0 10px 25px rgb(15 23 42 / 10%);
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 35px rgb(15 23 42 / 16%);
+  }
+
+  h2 {
+    margin: 0 0 0.5rem;
+  }
+
+  p {
+    margin: 0 0 1rem;
+    color: #6b7280;
+  }
+
+  span {
+    font-weight: 600;
+  }
+}
