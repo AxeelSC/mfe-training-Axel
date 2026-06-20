@@ -32,7 +32,7 @@
             "styles": ["projects/shell/src/styles.scss"],
             "outputPath": "dist/shell",
             "main": "projects/shell/src/main.ts",
-            "index": "projects\\shell\\src\\index.html",
+            "index": "projects/shell/src/index.html",
             "extraWebpackConfig": "projects/shell/webpack.config.js",
             "commonChunk": false
           },
@@ -110,7 +110,7 @@
             "styles": ["projects/catalog/src/styles.scss"],
             "outputPath": "dist/catalog",
             "main": "projects/catalog/src/main.ts",
-            "index": "projects\\catalog\\src\\index.html",
+            "index": "projects/catalog/src/index.html",
             "extraWebpackConfig": "projects/catalog/webpack.config.js",
             "commonChunk": false
           },
@@ -188,7 +188,7 @@
             "styles": ["projects/reports/src/styles.scss"],
             "outputPath": "dist/reports",
             "main": "projects/reports/src/main.ts",
-            "index": "projects\\reports\\src\\index.html",
+            "index": "projects/reports/src/index.html",
             "extraWebpackConfig": "projects/reports/webpack.config.js",
             "commonChunk": false
           },
@@ -242,3 +242,4 @@
     }
   }
 }
+
