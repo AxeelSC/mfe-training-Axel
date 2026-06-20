@@ -1,6 +1,18 @@
 import { Routes } from '@angular/router';
 import { loadRemoteModule } from '@angular-architects/module-federation';
 
+const isLocalhost =
+  window.location.hostname === 'localhost' ||
+  window.location.hostname === '127.0.0.1';
+
+const catalogRemoteEntry = isLocalhost
+  ? 'http://localhost:4201/remoteEntry.js'
+  : 'https://axeelsc.github.io/mfe-training-Axel/catalog/remoteEntry.js';
+
+const reportsRemoteEntry = isLocalhost
+  ? 'http://localhost:4202/remoteEntry.js'
+  : 'https://axeelsc.github.io/mfe-training-Axel/reports/remoteEntry.js';
+
 export const routes: Routes = [
   {
     path: '',
@@ -12,7 +24,7 @@ export const routes: Routes = [
     loadChildren: () =>
       loadRemoteModule({
         type: 'module',
-        remoteEntry: 'http://localhost:4201/remoteEntry.js',
+        remoteEntry: catalogRemoteEntry,
         exposedModule: './Routes',
       }).then((m) => m.routes),
   },
@@ -21,7 +33,7 @@ export const routes: Routes = [
     loadChildren: () =>
       loadRemoteModule({
         type: 'module',
-        remoteEntry: 'http://localhost:4202/remoteEntry.js',
+        remoteEntry: reportsRemoteEntry,
         exposedModule: './Routes',
       }).then((m) => m.routes),
   },
