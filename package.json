@@ -11,7 +11,11 @@
     "start:shell": "ng serve shell --port 4200",
     "start:catalog": "ng serve catalog --port 4201",
     "start:reports": "ng serve reports --port 4202",
-    "start:front": "concurrently npm:start:catalog npm:start:reports npm:start:shell"
+    "start:front": "concurrently npm:start:catalog npm:start:reports npm:start:shell",
+    "build:shell:ghpages": "ng build shell --configuration production --base-href /mfe-training-Axel/",
+    "build:catalog:ghpages": "ng build catalog --configuration production --base-href /mfe-training-Axel/catalog/",
+    "build:reports:ghpages": "ng build reports --configuration production --base-href /mfe-training-Axel/reports/",
+    "build:ghpages": "npm run build:shell:ghpages && npm run build:catalog:ghpages && npm run build:reports:ghpages"
   },
   "private": true,
   "packageManager": "npm@11.11.0",
